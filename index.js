@@ -11,8 +11,14 @@ let clrdark = 20;
 let svg = document.querySelector('svg');
 
 const date = new Date();
-document.getElementById('h3').innerText += ' ' + date.toLocaleDateString();
-document.getElementById('cpyear').innerText += ' ' + date.getFullYear() + ' Simachew'
+document.getElementById('h3').innerText += ' ' +
+  date.toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric'
+  });
+
+// document.getElementById('cpyear').innerText += ' ' + date.getFullYear() + ' Simachew'
 
 let hsize = document.getElementById('size');
 
